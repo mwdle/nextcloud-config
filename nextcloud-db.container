@@ -27,10 +27,9 @@ UserNS=auto
 NoNewPrivileges=true
 DropCapability=all
 
-HealthStartupCmd=sh -c 'PGUSER=$$(cat /run/secrets/db_username) pg_isready -d nextcloud || exit 1'
+HealthCmd=sh -c 'PGUSER=$$(cat /run/secrets/db_username) pg_isready -d nextcloud || exit 1'
 HealthStartupInterval=5s
 HealthStartupTimeout=5s
-HealthCmd=sh -c 'PGUSER=$$(cat /run/secrets/db_username) pg_isready -d nextcloud || exit 1'
 HealthInterval=60s
 HealthTimeout=5s
 HealthOnFailure=kill

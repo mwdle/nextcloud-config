@@ -16,10 +16,9 @@ DropCapability=all
 
 Exec=redis-server --save "" --maxmemory 192mb --maxmemory-policy allkeys-lru
 
-HealthStartupCmd=redis-cli ping
+HealthCmd=redis-cli ping
 HealthStartupInterval=5s
 HealthStartupTimeout=5s
-HealthCmd=redis-cli ping
 HealthInterval=60s
 HealthTimeout=5s
 HealthOnFailure=kill
