@@ -14,7 +14,7 @@ UserNS=auto
 NoNewPrivileges=true
 DropCapability=all
 
-Exec=redis-server --save "" --maxmemory 192mb --maxmemory-policy allkeys-lru
+Exec=redis-server --save "" --maxmemory 192mb
 
 HealthCmd=redis-cli ping
 HealthStartupInterval=5s
